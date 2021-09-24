@@ -2,9 +2,14 @@
 
 Scans for rare NFTs from [The Gaussian Protocol](https://opensea.io/collection/the-gaussian-protocol).
 
-This project generated random numbers at mint time, distributed on ~N(10,4).  Each of the 8888 NFTs has 8 "dice rolls".  In other words, NFTs with 1, 2, 18, 19 would be very rare.
+The Gaussian Protocol is a collection of 8888 NFTs that generated 8 random numbers at mint time, distributed on ~N(10,4).  In other words, NFTs with 1, 2, 18, 19 would be very rare.
 
-The mechanism for building the seed for each NFT was to use the NFT ID being minted (1-8888), the minter's address, and the current block number.  As all of these can be simulated ahead of time, we can scan the space of possible combinations to find rares.
+The seed for each NFT was constructed from three pieces of information:
+* the NFT ID being minted (1-8888)
+* the minter's address
+* the current block number.  
+
+As all of these can be simulated ahead of time, we can scan the space of possible combinations to find rares.
 
 ## Usage
 
