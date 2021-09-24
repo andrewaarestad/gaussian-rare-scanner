@@ -1,0 +1,7 @@
+.idea
+artifacts
+cache
+node_modules
+.env
+*.txt
+
